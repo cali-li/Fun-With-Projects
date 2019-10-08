@@ -60,3 +60,8 @@ if(answer):
     print "Yes"
 else:
     print "No"
+
+RK: The remove() method removes the item which is passed as an argument.
+
+If you need to delete elements based on the index (like the fourth element or last element), 
+you can use the pop() method. Also, you can use del statement to remove items from a list or delete an entire list.
