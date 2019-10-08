@@ -1,5 +1,3 @@
-#!/bin/python3
-
 import math
 import os
 import random
@@ -12,16 +10,10 @@ def checkMagazine(magazine, note):
     notenew = dict()
 
     for i in range(len(note)):
-        if note[i] in notenew:
-            notenew[note[i]] += 1
-        else:
-            notenew[note[i]] = 1
+        notenew[note[i]] = notenew.get(note[i],0) + 1
 
-    for i in range(len(maganew)):
-        if magazine[i] in maganew:
-            maganew[magazine[i]] += 1
-        else:
-            maganew[magazine[i]] = 1
+    for i in range(len(magazine)):
+        maganew[magazine[i]] = maganew.get(magazine[i],0) + 1
 
     for i in notenew:
         for j in maganew:
@@ -34,7 +26,6 @@ def checkMagazine(magazine, note):
         print('Yes')
     else:
         print('No')
-    
 
 if __name__ == '__main__':
     mn = input().split()
