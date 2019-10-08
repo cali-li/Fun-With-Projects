@@ -1,0 +1,50 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def checkMagazine(magazine, note):
+    k = 0
+    maganew = dict()
+    notenew = dict()
+
+    for i in range(len(notenew)):
+        if note[i] in notenew:
+            notenew[note[i]] += 1
+        else:
+            notenew[note[i]] = 1
+
+    for i in range(len(maganew)):
+        if magazine[i] in maganew:
+            maganew[magazine[i]] += 1
+        else:
+            maganew[magazine[i]] = 1
+
+    for i in notenew:
+        for j in maganew:
+            if j == i and maganew[j] >= notenew[i]:
+                maganew[j] = maganew[j] - notenew[i]
+                k += 1
+            else:
+                pass
+    if k == len(notenew):
+        print('Yes')
+    else:
+        print('No')
+    
+
+if __name__ == '__main__':
+    mn = input().split()
+
+    m = int(mn[0])
+
+    n = int(mn[1])
+
+    magazine = input().rstrip().split()
+
+    note = input().rstrip().split()
+
+    checkMagazine(magazine, note)
