@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#再看一遍
+def jumpingOnClouds(c):
+    jumps = 0
+    safe = 0
+    for i in c:
+        if i == 1:
+            jumps += 1 + safe // 2
+            safe = 0
+        else:
+            safe += 1
+    return jumps + safe // 2
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    c = list(map(int, input().rstrip().split()))
+
+    result = jumpingOnClouds(c)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
