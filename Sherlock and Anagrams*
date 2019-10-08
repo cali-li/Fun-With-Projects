@@ -1,0 +1,39 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the sherlockAndAnagrams function below.
+def sherlockAndAnagrams(s):
+    dic=dict()
+    k = 0
+    for i in range(len(s)):
+        for j in range(i+1, len(s)+1):
+            l = list(s[i:j].strip())
+            l.sort()
+            t = ''.join(l)
+            if t in dic:
+                k += dic[t]
+                dic[t] += 1
+            else:
+                dic[t] = 1
+    return k
+
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    q = int(input())
+
+    for q_itr in range(q):
+        s = input()
+
+        result = sherlockAndAnagrams(s)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
