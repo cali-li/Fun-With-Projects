@@ -39,3 +39,24 @@ if __name__ == '__main__':
     note = input().rstrip().split()
 
     checkMagazine(magazine, note)
+    
+    # A simple version -----------------------------------------------------------------------------------------------------------------
+    def ransom_note(magazine, rasom):
+    if len(rasom) > len(magazine):
+        return False
+
+    for w in rasom:
+        if not w in magazine:         # don not need magazine as a loop
+            return False
+        else:
+            magazine.remove(w)        # magazine is a list, using remove orther than pop
+
+    return True
+m, n = map(int, raw_input().strip().split(' '))     #input
+magazine = raw_input().strip().split(' ')
+ransom = raw_input().strip().split(' ')
+answer = ransom_note(magazine, ransom)
+if(answer):
+    print "Yes"
+else:
+    print "No"
