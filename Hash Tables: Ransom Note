@@ -11,7 +11,7 @@ def checkMagazine(magazine, note):
     maganew = dict()
     notenew = dict()
 
-    for i in range(len(notenew)):
+    for i in range(len(note)):
         if note[i] in notenew:
             notenew[note[i]] += 1
         else:
