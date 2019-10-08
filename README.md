@@ -33,3 +33,8 @@ Harold is a kidnapper who wrote a ransom note, but now he is worried it will be 
 Given the words in the magazine and the words in the ransom note, print Yes if he can replicate his ransom note exactly using whole words from the magazine; otherwise, print No.
 
 For example, the note is "Attack at dawn". The magazine contains only "attack at dawn". The magazine has all the right words, but there's a case mismatch. The answer is No.
+
+## Two Strings
+Given two strings, determine if they share a common substring. A substring may be as small as one character.
+
+For example, the words "a", "and", "art" share the common substring a. The words "be" and "cat" do not share a substring.
