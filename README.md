@@ -47,7 +47,7 @@ For example s = mom, the list of all anagrammatic pairs is [m,m],[mo,om] at posi
 ## 2D Array
 Given a 6*6 2D Array, arr:
 
-1 1 1 0 0 0
+1 1 1 0 0 0 \n
 0 1 0 0 0 0
 1 1 1 0 0 0
 0 0 0 0 0 0
