@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def countSwaps(a):
+    n=len(a)
+    numswap=0
+    finish=0
+    while finish==0:
+        finish=1
+        for i in range(n-1):
+            if a[i]>a[i+1]:
+                smaller=a.pop(i+1)
+                larger=a.pop(i)
+                a.insert(i,smaller)
+                a.insert(i+1,larger)
+                numswap += 1
+                finish=0
+    return print('Array is sorted in',numswap,'swaps.','\nFirst Element:',a[0],'\nLast Element:',a[n-1])
+
+if __name__ == '__main__':
+    n = int(input())
+
+    a = list(map(int, input().rstrip().split()))
+
+    countSwaps(a)
