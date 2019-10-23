@@ -105,3 +105,23 @@ Our highest hourglass value is 18 from the hourglass:
 A left rotation operation on an array shifts each of the array's elements 1 unit to the left. For example, if 2 left rotations are performed on array [1,2,3,4,5], then the array would become [3,4,5,1,2].
 
 Given an array a of n integers and a number, d, perform d left rotations on the array. Return the updated array to be printed as a single line of space-separated integers.
+
+## Bubble sort
+Consider the following version of Bubble Sort:
+```
+for (int i = 0; i < n; i++) {
+    
+    for (int j = 0; j < n - 1; j++) {
+        // Swap adjacent elements if they are in decreasing order
+        if (a[j] > a[j + 1]) {
+            swap(a[j], a[j + 1]);
+        }
+    }
+    
+}
+```
+Given an array of integers, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following three lines:
+
+Array is sorted in numSwaps swaps., where numSwaps is the number of swaps that took place.
+First Element: firstElement, where firstElement is the first element in the sorted array.
+Last Element: lastElement, where lastElement is the last element in the sorted array.
