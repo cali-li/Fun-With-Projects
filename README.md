@@ -133,3 +133,8 @@ Last Element: lastElement, where lastElement is the last element in the sorted a
 Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some. There are a number of different toys lying in front of him, tagged with their prices. Mark has only a certain amount to spend, and he wants to maximize the number of toys he buys with this money.
 
 Given a list of prices and an amount to spend, what is the maximum number of toys Mark can buy? For example, if prices = [1,2,3,4] and Mark has k = 7 to spend, he can buy items [1,2,3] for 6, or [3,4] for 7 units of currency. He would choose the first group of 3 items.
+
+## Minimum Absolute Difference in an Array
+Consider an array of integers, arr=[arr[0],arr[1],...arr[n-1]]. We define the absolute difference between two elements, a[i] and a[j] (where i!=j), to be the absolute value of a[i]-a[j].
+
+Given an array of integers, find and print the minimum absolute difference between any two elements in the array. For example, given the array arr=[-2,2,4] we can create 3 pairs of numbers: [-2,4],[-2,2] and [2,4]. The absolute differences for these pairs are 4,6 and 2. The minimum absolute difference is 2.
